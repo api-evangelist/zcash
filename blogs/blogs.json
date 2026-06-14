@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "source": "https://electriccoin.co/feed/",
+    "fetched": "2026-06-14",
+    "provider": "zcash"
+  },
+  "blogs": [
+    {
+      "title": "Zashi 2.4.9 Is Faster!",
+      "url": "https://electriccoin.co/blog/zashi-2-4-9-is-faster/",
+      "date": "2025-12-04",
+      "description": "UI improvements and performance enhancements driven by user feedback."
+    },
+    {
+      "title": "Reorganizing Around Zcash User",
+      "url": "https://electriccoin.co/blog/reorganizing-around-zcash-user/",
+      "date": "2025-12-01",
+      "description": "ECC prioritizes delivering the best experience for ZEC users with intuitive interface design."
+    },
+    {
+      "title": "Gemini Sets the Standard for Privacy on CEXs With Shielded ZEC Withdrawals",
+      "url": "https://electriccoin.co/blog/gemini-sets-the-standard-for-privacy-on-cexs-with-shielded-zec-withdrawals/",
+      "date": "2025-11-10",
+      "description": "Gemini's Zcash update establishes new benchmarks for centralized exchange privacy support."
+    },
+    {
+      "title": "ECC Roadmap: Q4 2025",
+      "url": "https://electriccoin.co/blog/ecc-roadmap-q4-2025/",
+      "date": "2025-10-31",
+      "description": "Mission focuses on protecting privacy, consent, security, and human dignity."
+    },
+    {
+      "title": "Zashi Swaps: Decentralized On-Ramp is Live",
+      "url": "https://electriccoin.co/blog/zashi-swaps-decentralized-on-ramp-is-live/",
+      "date": "2025-10-01",
+      "description": "Convert assets like USDC, Bitcoin, or Solana into ZEC without centralized exchanges."
+    },
+    {
+      "title": "Private Cross-Chain Payments with Zashi CrossPay",
+      "url": "https://electriccoin.co/blog/private-cross-chain-payments-with-zashi-crosspay/",
+      "date": "2025-09-16",
+      "description": "CrossPay enables private payments across blockchains using shielded ZEC."
+    },
+    {
+      "title": "Live in Zashi: Decentralized Off-Ramp for Shielded ZEC",
+      "url": "https://electriccoin.co/blog/live-in-zashi-decentralized-off-ramp-for-shielded-zec/",
+      "date": "2025-08-28",
+      "description": "First Zashi-NEAR integration feature allows swapping shielded ZEC to other cryptocurrencies."
+    },
+    {
+      "title": "Zashi 2.1: Enhanced Privacy with Tor (Beta)",
+      "url": "https://electriccoin.co/blog/zashi-2-1-enhanced-privacy-with-tor-beta/",
+      "date": "2025-08-07",
+      "description": "Expanded Tor network integration for privacy-conscious Zcash users."
+    },
+    {
+      "title": "ECC Roadmap: Q3 2025",
+      "url": "https://electriccoin.co/blog/ecc-roadmap-q3-2025/",
+      "date": "2025-07-25",
+      "description": "Commitment to digital cash through privacy protocols and product innovation."
+    },
+    {
+      "title": "ECC Transparency Report for Q4 2024",
+      "url": "https://electriccoin.co/blog/ecc-transparency-report-for-q4-2024/",
+      "date": "2025-07-07",
+      "description": "Demonstrates commitment to openness and transparency in supporting Zcash evolution."
+    },
+    {
+      "title": "The Privacy Illusion: What Crypto Gets Wrong",
+      "url": "https://electriccoin.co/blog/the-privacy-illusion-what-crypto-gets-wrong/",
+      "date": "2025-05-22",
+      "description": "Explores how privacy terms are misused in cryptocurrency, creating false security perceptions."
+    },
+    {
+      "title": "Zcash + Maya: Privacy, Self-Sovereignty, and Decentralization",
+      "url": "https://electriccoin.co/blog/zcash-maya-privacy-self-sovereignty-and-decentralization/",
+      "date": "2025-05-21",
+      "description": "Maya Protocol integration unlocks decentralized features while maintaining Zcash's core mission."
+    }
+  ]
+}

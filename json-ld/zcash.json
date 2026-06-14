@@ -1,0 +1,130 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Zcash",
+  "description": "Zcash is a privacy-preserving cryptocurrency that uses zero-knowledge proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via zcashd and zebrad for wallet operations, shielded transaction management, blockchain data access, and network interaction.",
+  "url": "https://z.cash/",
+  "image": "https://z.cash/wp-content/uploads/2022/01/zcash-icon-gold.png",
+  "applicationCategory": "FinanceApplication",
+  "keywords": [
+    "Cryptocurrency",
+    "Privacy",
+    "Blockchain",
+    "Zero-Knowledge Proofs",
+    "Shielded Transactions",
+    "ZEC",
+    "JSON-RPC",
+    "gRPC"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Electric Coin Company",
+      "url": "https://electriccoin.co/",
+      "email": "ecosystem@z.cash"
+    },
+    {
+      "@type": "Organization",
+      "name": "Zcash Foundation",
+      "url": "https://zfnd.org/"
+    }
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "ecosystem@z.cash",
+    "contactType": "Ecosystem Support",
+    "url": "https://z.cash/community-hub/"
+  },
+  "documentation": [
+    {
+      "@type": "TechArticle",
+      "name": "Zcash Documentation",
+      "url": "https://zcash.readthedocs.io/"
+    },
+    {
+      "@type": "TechArticle",
+      "name": "Zcash RPC Reference",
+      "url": "https://zcash.github.io/rpc/"
+    },
+    {
+      "@type": "TechArticle",
+      "name": "Zcash Payment API",
+      "url": "https://github.com/zcash/zcash/blob/master/doc/payment-api.md"
+    },
+    {
+      "@type": "TechArticle",
+      "name": "Zebra Documentation",
+      "url": "https://zebra.zfnd.org/"
+    }
+  ],
+  "codeRepository": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "zcash (zcashd)",
+      "url": "https://github.com/zcash/zcash",
+      "programmingLanguage": "C++"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "zebra",
+      "url": "https://github.com/ZcashFoundation/zebra",
+      "programmingLanguage": "Rust"
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "lightwalletd",
+      "url": "https://github.com/zcash/lightwalletd",
+      "programmingLanguage": "Go"
+    }
+  ],
+  "offers": {
+    "@type": "Offer",
+    "description": "Open-source privacy-preserving cryptocurrency with JSON-RPC and gRPC APIs for integration",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "hasPart": [
+    {
+      "@type": "WebAPI",
+      "name": "Zcash JSON-RPC API (zcashd)",
+      "description": "The primary JSON-RPC interface exposed by zcashd, the original Zcash full node. Backwards compatible with Bitcoin Core 0.11.2 with Zcash-specific extensions for shielded address management and private transactions.",
+      "url": "https://zcash.readthedocs.io/en/latest/rtd_pages/zig.html",
+      "documentation": "https://zcash.github.io/rpc/",
+      "endpointURL": "http://127.0.0.1:8232/",
+      "protocol": "JSON-RPC"
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Zcash Payment API (z_ methods)",
+      "description": "The Zcash-specific extension to the JSON-RPC interface that enables shielded (private) transaction operations using zero-knowledge proofs. Includes methods for managing shielded addresses, sending private transactions with encrypted memos, and key management for the Sapling and Orchard shielded pools.",
+      "url": "https://github.com/zcash/zcash/blob/master/doc/payment-api.md",
+      "documentation": "https://zcash.github.io/rpc/",
+      "endpointURL": "http://127.0.0.1:8232/",
+      "protocol": "JSON-RPC"
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Lightwalletd gRPC API",
+      "description": "A bandwidth-efficient gRPC service that provides a compact block streaming interface to the Zcash blockchain, enabling lightweight mobile and web wallet clients to sync shielded transactions without downloading the full blockchain.",
+      "url": "https://github.com/zcash/lightwalletd",
+      "endpointURL": "https://mainnet.lightwalletd.com:9067/",
+      "protocol": "gRPC"
+    },
+    {
+      "@type": "WebAPI",
+      "name": "Zebra JSON-RPC API",
+      "description": "The JSON-RPC API provided by zebrad, the Zcash Foundation's independent Zcash full node implementation written in Rust. Designed to be a drop-in replacement for zcashd's RPC interface.",
+      "url": "https://zebra.zfnd.org/",
+      "documentation": "https://zebra.zfnd.org/user/lightwalletd.html",
+      "endpointURL": "http://127.0.0.1:8232/",
+      "protocol": "JSON-RPC"
+    }
+  ],
+  "softwareVersion": "latest",
+  "license": "https://github.com/zcash/zcash/blob/master/COPYING",
+  "sameAs": [
+    "https://github.com/zcash/zcash",
+    "https://electriccoin.co/",
+    "https://zfnd.org/"
+  ]
+}

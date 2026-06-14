@@ -24,6 +24,7 @@ contact:
     email: ecosystem@z.cash
     url: https://z.cash/community-hub/
 specificationVersion: "0.19"
+modified: "2026-06-14"
 apis:
   - name: Zcash JSON-RPC API (zcashd)
     description: The primary JSON-RPC interface exposed by zcashd, the original Zcash
