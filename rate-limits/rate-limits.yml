@@ -1,0 +1,41 @@
+rateLimits:
+  - name: Self-Hosted zcashd / zebrad Node
+    description: When running your own zcashd or zebrad full node, there are no
+      externally imposed rate limits. Throughput is constrained only by local hardware
+      resources (CPU, RAM, disk I/O, and network bandwidth). Operators may configure
+      their own limits via node configuration files.
+    limits: []
+    notes:
+      - No API key or rate limiting by default on self-hosted nodes.
+      - RPC server can be configured with rpcworkqueue and rpcthreads settings in
+        zcash.conf to control concurrency.
+      - The zcashd RPC server defaults to a work queue of 16 and 4 RPC threads.
+      - Heavy operations like z_sendmany are asynchronous; the node queues and executes
+        them via the async operations system (z_getoperationstatus / z_getoperationresult).
+
+  - name: Lightwalletd gRPC Service (Self-Hosted)
+    description: No built-in rate limiting in the open-source lightwalletd implementation.
+      Operators are responsible for deploying their own rate limiting via reverse
+      proxies (e.g., nginx, envoy) or API gateways in front of the gRPC service.
+    limits: []
+    notes:
+      - Public lightwalletd endpoints provided by the Zcash community may impose
+        fair-use policies.
+      - Client SDKs (Android, iOS) implement their own retry and backoff logic.
+
+  - name: Third-Party Providers (e.g., GetBlock.io)
+    description: Commercial node providers impose rate limits based on subscription
+      tier. Free tiers typically include a limited number of requests per day or
+      per second.
+    limits:
+      - tier: Free
+        requests_per_day: 40000
+        requests_per_second: ~
+        notes: Approximate; varies by provider and may change.
+      - tier: Paid
+        requests_per_day: Unlimited (varies by plan)
+        requests_per_second: Higher concurrency
+        notes: Dedicated node options available with no shared rate limits.
+    notes:
+      - Always consult the specific third-party provider's current pricing and rate
+        limit pages for accurate figures.

@@ -1,0 +1,78 @@
+finops:
+  overview: >
+    Zcash (ZEC) is a fully open-source protocol with no API fees or licensing costs
+    for running your own infrastructure. Cost drivers are infrastructure (hardware,
+    hosting, bandwidth) and, for commercial providers, per-request pricing. ZEC
+    transaction fees are paid on-chain and denominated in ZEC.
+
+  onChainFees:
+    - name: Standard Transaction Fee
+      description: The conventional transaction fee for sending ZEC (transparent or
+        shielded). Fees are paid in ZEC and are minimal, designed to prevent spam
+        rather than generate revenue.
+      amount: "0.00001 ZEC (1000 zatoshis)"
+      notes:
+        - The default fee for z_sendmany is 0.0001 ZEC (10,000 zatoshis).
+        - ZIP-317 introduced a new fee scheme that sets fees proportionally to transaction
+          size and number of actions; conventionally ~0.00001 ZEC for simple transactions.
+        - Fees go to miners/validators, not to any central Zcash entity.
+
+    - name: z_shieldcoinbase Fee
+      description: Default fee applied when shielding coinbase (mining reward) UTXOs
+        to a shielded address.
+      amount: "0.0001 ZEC (default, configurable)"
+
+  infrastructureCosts:
+    - name: Full Node (zcashd / zebrad)
+      description: Operating a full Zcash node requires sufficient disk, RAM, and CPU.
+        Cloud infrastructure costs are the operator's responsibility.
+      estimatedCosts:
+        - item: Disk storage
+          amount: "~120 GB+ (blockchain data, growing)"
+        - item: RAM
+          amount: "~4 GB minimum, 8 GB+ recommended"
+        - item: Monthly VPS (example)
+          amount: "$20–$80/month depending on provider and specs"
+
+    - name: Lightwalletd Server
+      description: A lightwalletd instance requires a full node backend plus a server
+        to run the gRPC service. Lightweight compared to serving the full node RPC
+        to many clients.
+      estimatedCosts:
+        - item: Monthly VPS (additional for lightwalletd)
+          amount: "$10–$40/month"
+
+  developerFundAllocation:
+    description: Zcash has historically directed a portion of newly mined ZEC to fund
+      development organizations (Electric Coin Company, Zcash Foundation, and granted
+      teams). This is a protocol-level allocation, not an API fee.
+    notes:
+      - The current development fund allocation is governed by Zcash Improvement
+        Proposals (ZIPs) and community governance.
+      - No fees are charged for API usage; development is funded through ZEC block
+        rewards.
+
+  thirdPartyProviders:
+    - name: GetBlock.io
+      url: https://getblock.io/nodes/zec/
+      description: Hosted Zcash node provider with free and paid plans.
+      pricing:
+        - tier: Shared Free
+          requests_per_day: "40,000"
+          monthly_cost: "$0"
+        - tier: Shared Starter
+          monthly_cost: "From ~$9/month"
+          notes: Higher request limits
+        - tier: Dedicated Node
+          monthly_cost: "Custom pricing"
+          notes: No shared rate limits; full node access
+      notes:
+        - Pricing subject to change; check provider directly for current rates.
+
+  references:
+    - title: Zcash Transaction Fees (ZIP-317)
+      url: https://zips.z.cash/zip-0317
+    - title: Zcash Foundation Funding
+      url: https://zfnd.org/
+    - title: Electric Coin Company
+      url: https://electriccoin.co/

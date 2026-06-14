@@ -1,0 +1,52 @@
+plans:
+  - name: Self-Hosted (Open Source)
+    description: Run your own zcashd or zebrad full node. All JSON-RPC and Payment
+      API methods are available at no cost. Requires downloading the full Zcash blockchain
+      (~100 GB+). Suitable for developers, exchanges, and businesses needing full
+      node control and auditability.
+    url: https://zcash.readthedocs.io/en/latest/rtd_pages/zcashd.html
+    pricing:
+      - type: free
+        description: Open-source software, free to download and run. Infrastructure
+          costs (server, bandwidth, storage) are the operator's responsibility.
+    features:
+      - Full blockchain access
+      - All JSON-RPC methods (blockchain, wallet, mining, network)
+      - Full Zcash Payment API (z_ methods)
+      - Shielded address and transaction management
+      - Encrypted memo fields
+      - Transparent and shielded pool support
+      - Sapling and Orchard shielded pool access
+      - Testnet access
+      - No rate limits (self-imposed)
+
+  - name: Lightwalletd Service (Self-Hosted)
+    description: Run a lightwalletd server backed by a full node (zcashd or zebrad)
+      to serve lightweight wallet clients via gRPC. Provides compact block streaming
+      so mobile and web clients can sync without downloading the full chain.
+    url: https://github.com/zcash/lightwalletd
+    pricing:
+      - type: free
+        description: Open-source service. Infrastructure costs are the operator's
+          responsibility.
+    features:
+      - Compact block streaming (gRPC)
+      - CompactTxStreamer service
+      - Mobile wallet backend support
+      - Bandwidth-efficient sync
+      - Mainnet and testnet support
+
+  - name: Third-Party Node Providers
+    description: Commercial API providers such as GetBlock.io offer hosted Zcash
+      node access via JSON-RPC without running your own infrastructure. Pricing and
+      rate limits vary by provider.
+    url: https://getblock.io/nodes/zec/
+    pricing:
+      - type: tiered
+        description: Free tier and paid plans available from third-party providers.
+          Pricing depends on request volume and node access level.
+    features:
+      - Hosted JSON-RPC access
+      - No infrastructure management
+      - Shared or dedicated node options
+      - Standard Zcash RPC methods

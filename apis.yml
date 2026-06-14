@@ -1,0 +1,253 @@
+name: Zcash
+description: Zcash is a privacy-preserving cryptocurrency that uses zero-knowledge
+  proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via
+  zcashd and zebrad for wallet operations, shielded transaction management, blockchain
+  data access, and network interaction.
+image: https://z.cash/wp-content/uploads/2022/01/zcash-icon-gold.png
+tags:
+  - Cryptocurrency
+  - Privacy
+  - Blockchain
+  - Zero-Knowledge Proofs
+  - Shielded Transactions
+  - ZEC
+url: https://z.cash/
+baseURL: http://127.0.0.1:8232/
+humanURL: https://z.cash/
+externalDocs:
+  - url: https://zcash.readthedocs.io/
+    description: Zcash Documentation
+  - url: https://zcash.github.io/rpc/
+    description: Zcash RPC Reference
+contact:
+  - FN: Zcash Ecosystem Support
+    email: ecosystem@z.cash
+    url: https://z.cash/community-hub/
+specificationVersion: "0.19"
+apis:
+  - name: Zcash JSON-RPC API (zcashd)
+    description: The primary JSON-RPC interface exposed by zcashd, the original Zcash
+      full node. Backwards compatible with Bitcoin Core 0.11.2 with Zcash-specific
+      extensions for shielded address management and private transactions. Accessible
+      at localhost port 8232 with RPC authentication.
+    humanURL: https://zcash.readthedocs.io/en/latest/rtd_pages/zig.html
+    baseURL: http://127.0.0.1:8232/
+    tags:
+      - JSON-RPC
+      - Blockchain
+      - Wallet
+      - Transactions
+    properties:
+      - type: Documentation
+        url: https://zcash.readthedocs.io/en/latest/rtd_pages/zig.html
+      - type: ReferenceDocumentation
+        url: https://zcash.github.io/rpc/
+      - type: OpenAPI
+        url: https://raw.githubusercontent.com/zcash/zcash/master/doc/man/zcash-cli.1
+    contact:
+      - FN: Zcash Integration Support
+        email: ecosystem@z.cash
+    operations:
+      - label: Blockchain Methods
+        maturity: stable
+        methods:
+          - getbestblockhash
+          - getblock
+          - getblockchaininfo
+          - getblockcount
+          - getblockhash
+          - getblockheader
+          - getchaintips
+          - getdifficulty
+          - getmempoolinfo
+          - getrawmempool
+          - gettxout
+          - gettxoutsetinfo
+          - verifychain
+      - label: Wallet Methods
+        maturity: stable
+        methods:
+          - getbalance
+          - getnewaddress
+          - getreceivedbyaddress
+          - gettransaction
+          - listaccounts
+          - listaddressgroupings
+          - listreceivedbyaddress
+          - listtransactions
+          - listunspent
+          - sendmany
+          - sendtoaddress
+          - settxfee
+      - label: Raw Transaction Methods
+        maturity: stable
+        methods:
+          - createrawtransaction
+          - decoderawtransaction
+          - decodescript
+          - fundrawtransaction
+          - getrawtransaction
+          - sendrawtransaction
+          - signrawtransaction
+      - label: Network Methods
+        maturity: stable
+        methods:
+          - addnode
+          - getaddednodeinfo
+          - getconnectioncount
+          - getnettotals
+          - getnetworkinfo
+          - getpeerinfo
+          - ping
+      - label: Mining Methods
+        maturity: stable
+        methods:
+          - getblocksubsidy
+          - getblocktemplate
+          - getlocalsolps
+          - getmininginfo
+          - getnetworksolps
+          - submitblock
+      - label: Control Methods
+        maturity: stable
+        methods:
+          - getinfo
+          - getmemoryinfo
+          - help
+          - stop
+
+  - name: Zcash Payment API (z_ methods)
+    description: The Zcash-specific extension to the JSON-RPC interface that enables
+      shielded (private) transaction operations using zero-knowledge proofs. Includes
+      methods for managing shielded addresses (z-addrs), sending private transactions
+      with encrypted memos, and key management for the Sapling and Orchard shielded
+      pools.
+    humanURL: https://github.com/zcash/zcash/blob/master/doc/payment-api.md
+    baseURL: http://127.0.0.1:8232/
+    tags:
+      - JSON-RPC
+      - Shielded Transactions
+      - Privacy
+      - Zero-Knowledge Proofs
+      - Sapling
+      - Orchard
+    properties:
+      - type: Documentation
+        url: https://github.com/zcash/zcash/blob/master/doc/payment-api.md
+      - type: ReferenceDocumentation
+        url: https://zcash.github.io/rpc/
+    operations:
+      - label: Shielded Address Management
+        maturity: stable
+        methods:
+          - z_getnewaddress
+          - z_listaddresses
+          - z_validateaddress
+      - label: Shielded Balances
+        maturity: stable
+        methods:
+          - z_getbalance
+          - z_gettotalbalance
+      - label: Shielded Key Management
+        maturity: stable
+        methods:
+          - z_exportkey
+          - z_importkey
+          - z_exportwallet
+          - z_importwallet
+          - z_exportviewingkey
+          - z_importviewingkey
+      - label: Shielded Payments
+        maturity: stable
+        methods:
+          - z_sendmany
+          - z_shieldcoinbase
+          - z_listreceivedbyaddress
+          - z_listunspent
+      - label: Async Operations
+        maturity: stable
+        methods:
+          - z_getoperationresult
+          - z_getoperationstatus
+          - z_listoperationids
+
+  - name: Lightwalletd gRPC API
+    description: A bandwidth-efficient gRPC service that provides a compact block streaming
+      interface to the Zcash blockchain, enabling lightweight mobile and web wallet
+      clients to sync shielded transactions without downloading the full blockchain.
+      Backed by either zcashd or zebrad full nodes. Implements the CompactTxStreamer
+      service.
+    humanURL: https://github.com/zcash/lightwalletd
+    baseURL: https://mainnet.lightwalletd.com:9067/
+    tags:
+      - gRPC
+      - Lightclient
+      - Mobile
+      - Compact Blocks
+      - Streaming
+    properties:
+      - type: Documentation
+        url: https://github.com/zcash/lightwalletd
+      - type: GithubRepository
+        url: https://github.com/zcash/lightwalletd
+      - type: ProtoFile
+        url: https://github.com/zcash/lightwalletd/blob/master/walletrpc/compact_formats.proto
+
+  - name: Zebra JSON-RPC API
+    description: The JSON-RPC API provided by zebrad, the Zcash Foundation's independent
+      Zcash full node implementation written in Rust. Designed to be a drop-in replacement
+      for zcashd's RPC interface as zcashd is deprecated. Supports the standard Zcash
+      RPC method set and lightwalletd backends. Uses cookie-based authentication by
+      default from v2.0.0.
+    humanURL: https://zebra.zfnd.org/
+    baseURL: http://127.0.0.1:8232/
+    tags:
+      - JSON-RPC
+      - Zebra
+      - Rust
+      - Blockchain
+    properties:
+      - type: Documentation
+        url: https://zebra.zfnd.org/
+      - type: GithubRepository
+        url: https://github.com/ZcashFoundation/zebra
+      - type: ReferenceDocumentation
+        url: https://zebra.zfnd.org/user/lightwalletd.html
+
+maintainers:
+  - FN: Electric Coin Company
+    url: https://electriccoin.co/
+    email: ecosystem@z.cash
+  - FN: Zcash Foundation
+    url: https://zfnd.org/
+
+sdks:
+  - label: Zcash Android SDK
+    language: Kotlin
+    url: https://github.com/zcash/zcash-android-wallet-sdk
+  - label: Zcash iOS SDK
+    language: Swift
+    url: https://github.com/zcash/ZcashLightClientKit
+  - label: Zcash Rust Libraries
+    language: Rust
+    url: https://github.com/zcash/librustzcash
+
+links:
+  - rel: homepage
+    href: https://z.cash/
+  - rel: documentation
+    href: https://zcash.readthedocs.io/
+  - rel: rpc-reference
+    href: https://zcash.github.io/rpc/
+  - rel: github
+    href: https://github.com/zcash/zcash
+  - rel: payment-api
+    href: https://github.com/zcash/zcash/blob/master/doc/payment-api.md
+  - rel: testnet
+    href: https://zcash.readthedocs.io/en/latest/rtd_pages/testnet.html
+  - rel: community
+    href: https://z.cash/community-hub/
+  - rel: blog
+    href: https://electriccoin.co/blog/
+  - rel: status
+    href: https://status.z.cash/
