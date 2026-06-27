@@ -189,7 +189,7 @@ apis:
     properties:
       - type: Documentation
         url: https://github.com/zcash/lightwalletd
-      - type: GithubRepository
+      - type: GitHubRepository
         url: https://github.com/zcash/lightwalletd
       - type: ProtoFile
         url: https://github.com/zcash/lightwalletd/blob/master/walletrpc/compact_formats.proto
@@ -210,7 +210,7 @@ apis:
     properties:
       - type: Documentation
         url: https://zebra.zfnd.org/
-      - type: GithubRepository
+      - type: GitHubRepository
         url: https://github.com/ZcashFoundation/zebra
       - type: ReferenceDocumentation
         url: https://zebra.zfnd.org/user/lightwalletd.html
