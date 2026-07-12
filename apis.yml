@@ -252,3 +252,6 @@ links:
     href: https://electriccoin.co/blog/
   - rel: status
     href: https://status.z.cash/
+common:
+- type: DomainSecurity
+  url: security/zcash-domain-security.yml
