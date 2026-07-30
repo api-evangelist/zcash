@@ -3,6 +3,18 @@ description: Zcash is a privacy-preserving cryptocurrency that uses zero-knowled
   proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via
   zcashd and zebrad for wallet operations, shielded transaction management, blockchain
   data access, and network interaction.
+accessModel:
+  pricing: free
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Free
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
 image: https://z.cash/wp-content/uploads/2022/01/zcash-icon-gold.png
 tags:
   - Cryptocurrency
