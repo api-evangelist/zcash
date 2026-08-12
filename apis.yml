@@ -265,5 +265,8 @@ links:
   - rel: status
     href: https://status.z.cash/
 common:
+- type: License
+  name: MIT
+  url: https://github.com/zcash/lightwalletd/blob/master/LICENSE
 - type: DomainSecurity
   url: security/zcash-domain-security.yml
