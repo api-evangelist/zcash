@@ -35,7 +35,7 @@ contact:
   - FN: Zcash Ecosystem Support
     email: ecosystem@z.cash
     url: https://z.cash/community-hub/
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 modified: "2026-06-14"
 apis:
   - name: Zcash JSON-RPC API (zcashd)
