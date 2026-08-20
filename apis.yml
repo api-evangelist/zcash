@@ -48,6 +48,11 @@ apis:
     tags:
       - JSON-RPC
       - Blockchain
+      - Wallets
+      - Transaction
+    tags_raw:
+      - JSON-RPC
+      - Blockchain
       - Wallet
       - Transactions
     properties:
