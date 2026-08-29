@@ -3,6 +3,18 @@ description: Zcash is a privacy-preserving cryptocurrency that uses zero-knowled
   proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via
   zcashd and zebrad for wallet operations, shielded transaction management, blockchain
   data access, and network interaction.
+deliveryModel:
+  model: self-hosted
+  license: MIT
+  open_source: true
+  commercial: false
+  callable_host: false
+  label: Self-hosted open source · you run it yourself
+  confidence: high
+  source:
+  - license
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: unknown
@@ -270,6 +282,14 @@ links:
   - rel: status
     href: https://status.z.cash/
 common:
+- type: IssueTracker
+  url: https://github.com/zcash/lightwalletd/issues
+- type: Releases
+  url: https://github.com/zcash/lightwalletd/releases
+- type: CodeOfConduct
+  url: https://github.com/zcash/lightwalletd/blob/master/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/zcash/lightwalletd/blob/master/CONTRIBUTING.md
 - type: License
   name: MIT
   url: https://github.com/zcash/lightwalletd/blob/master/LICENSE
