@@ -54,3 +54,28 @@ plans:
       - No infrastructure management
       - Shared or dedicated node options
       - Standard Zcash RPC methods
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - free
+  units: []
+  plans:
+  - name: Self-Hosted (Open Source)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Lightwalletd Service (Self-Hosted)
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
+  - name: Third-Party Node Providers
+    access: other
+    model: free
+    model_how: derived
+    units: []
+    periods: []
