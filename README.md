@@ -64,45 +64,63 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Zcash is a privacy-preserving cryptocurrency that uses zero-knowledge proofs (zk-SNARKs) to enable shielded (private) transactions alongside transparent transactions. It provides JSON-RPC APIs via zcashd and zebrad for shielded transaction management, wallet operations, and blockchain data access.
+Zcash is a privacy-preserving cryptocurrency that uses zero-knowledge proofs (zk-SNARKs) to enable shielded transactions. It provides JSON-RPC APIs via zcashd and zebrad for wallet operations, shielded transaction management, blockchain data access, and network interaction.
 
-## APIs
+**Areas:** Cryptocurrency · Privacy · Blockchain · Zero-Knowledge Proofs · Shielded Transactions · ZEC
 
-| API | Type | Description |
-|-----|------|-------------|
-| Zcash JSON-RPC API (zcashd) | JSON-RPC | Full node Bitcoin-compatible + Zcash extensions |
-| Zcash Payment API (z_ methods) | JSON-RPC | Shielded address and private transaction management |
-| Lightwalletd gRPC API | gRPC | Compact block streaming for lightweight clients |
-| Zebra JSON-RPC API | JSON-RPC | Rust-based alternative full node (zcashd successor) |
+## Zcash on APIs.io
 
-## Key Features
+Everything profiled for Zcash is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/zcash/](https://apis.io/providers/zcash/)** — or go straight to one of the APIs or properties below.
 
-- Privacy-preserving shielded transactions using zk-SNARKs (Sapling and Orchard pools)
-- Encrypted memo fields on shielded transactions
-- Bitcoin-compatible transparent transactions (t-addresses)
-- Shielded addresses (z-addresses) for full privacy
-- Asynchronous operation model for shielded transaction creation
-- Compact block streaming via lightwalletd for mobile/web wallets
-- Viewing keys for selective disclosure of transaction details
+### APIs (4)
 
-## Developer Resources
+- [Zcash JSON-RPC API (zcashd)](https://apis.io/apis/zcash/zcash-json-rpc-api-zcashd/) — The primary JSON-RPC interface exposed by zcashd, the original Zcash full node. Backwards compatible with Bitcoin Core 0.11.2 with Zcash-specific extensions…
+- [Zcash Payment API (z_ methods)](https://apis.io/apis/zcash/zcash-payment-api-z-methods/) — The Zcash-specific extension to the JSON-RPC interface that enables shielded (private) transaction operations using zero-knowledge proofs. Includes methods…
+- [Lightwalletd gRPC API](https://apis.io/apis/zcash/lightwalletd-grpc-api/) — A bandwidth-efficient gRPC service that provides a compact block streaming interface to the Zcash blockchain, enabling lightweight mobile and web wallet…
+- [Zebra JSON-RPC API](https://apis.io/apis/zcash/zebra-json-rpc-api/) — The JSON-RPC API provided by zebrad, the Zcash Foundation's independent Zcash full node implementation written in Rust. Designed to be a drop-in replacement…
 
-- [Zcash Documentation](https://zcash.readthedocs.io/)
-- [Zcash RPC Reference](https://zcash.github.io/rpc/)
-- [Payment API](https://github.com/zcash/zcash/blob/master/doc/payment-api.md)
-- [Integration Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/zig.html)
-- [Lightwalletd](https://github.com/zcash/lightwalletd)
-- [Zebra (Zcash Foundation node)](https://zebra.zfnd.org/)
-- [Android SDK](https://github.com/zcash/zcash-android-wallet-sdk)
-- [iOS SDK (ZcashLightClientKit)](https://github.com/zcash/ZcashLightClientKit)
-- [Testnet Guide](https://zcash.readthedocs.io/en/latest/rtd_pages/testnet.html)
+### Published properties
 
-## Contact
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-- Integration support: ecosystem@z.cash
-- Community: https://z.cash/community-hub/
+#### Security (1)
 
-## Maintainers
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Electric Coin Company](https://electriccoin.co/)
-- [Zcash Foundation](https://zfnd.org/)
+- [Zcash Domain Security](https://apis.io/security/zcash/zcash-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Plans](https://apis.io/plans/zcash/plans/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Rate Limits](https://apis.io/rate-limits/zcash/rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Finops](https://apis.io/finops/zcash/finops/)
+
+## API Evangelist rating
+
+**Unrated** — no public website could be reached for this company, so there was almost nothing to measure and nothing a reader could check.
+
+This is not a score of zero. No rating is published for this company. If that is wrong because something public exists that we missed, say so on this repository or email [info@apievangelist.com](mailto:info@apievangelist.com) and it will be re-run — free, and no justification needed.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Zcash: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/zcash/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
